@@ -1,34 +1,159 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodie - Restaurant website</title>
-    <link rel="stylesheet" href="style.css">
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
 
-  </head>
-  <body>
-    <!-- Login Modal-->
-     <div id="loginModal" class="modal">
-      <div class="modal-content">
-        <span class="close" aria-label="Close login modal">&times;</span>
-        <h2>Login to Foodie</h2>
-        <form id="loginForm">
-          <div class="form-group">
-            <input type="email" id="email" placeholder="Email" required aria-required="true">
-            <label for="email">Email</label>
-          </div>
-          <div class="form-group">
-            <input type="password" id="password" placeholder="Password" required aria-required="true">
-            <label for="password">Password</label>
-          </div>
-          <div class="form-group">
-            <button type="submit" aria-label="Submit login form">Login</button>
-        </form>
-      </div>
-     </div>
-    
-    <script src="script.js"></script>
-  </body>
-  </html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie - Restaurant website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Login Modal-->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" aria-label="Close login modal">&times;</span>
+      <h2>Login to Foodie</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email" required aria-required="true">
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" placeholder="Password" required aria-required="true">
+          <label for="password">Password</label>
+        </div>
+        <div class="form-group">
+          <button type="submit" aria-label="Submit login form">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Reservation Modal -->
+  <div class="modal" id="reservationModal">
+    <div class="modal-content">'
+      <h2>Make a Reservation</h2>
+
+      <form id="reservationForm">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required aria-required="true">
+          <label>Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required aria-required="true">
+          <label>Your Email</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Phone Number" required aria-required="true">
+          <label>Phone Number</label>
+        </div>
+        <div class="form-group">
+          <input type="date" required aria-required="true">
+          <label>Date</label>
+        </div>
+        <div class="form-group">
+          <input type="time" required aria-required="true">
+          <label>Time</label>
+        </div>
+        <div class="form-group">
+          <select required aria-required="true">
+            <option value="">Number of Guests</option>
+            <option value="1">1 Person</option>
+            <option value="2">2 Person</option>
+            <option value="3">3 Person</option>
+            <option value="4">4 Person</option>
+            <option value="5+">5+ Person</option>
+          </select>
+          <label>Number of Guests</label>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Special Requests" rows="3"></textarea>
+          <label>Special Requests</label>
+        </div>
+        <div class="form-group">
+          <button type="submit" aria-label="Submit reservation form">Make Reservation</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="modal" id="contactModal">
+    <div class="modal-content">'
+      <h2>Send us a Message</h2>
+
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required aria-required="true">
+          <label>Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required aria-required="true">
+          <label>Your Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Subject" required aria-required="true">
+          <label>Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5"></textarea>
+          <label>Your Message</label>
+        </div>
+        <div class="form-group">
+          <button type="submit" aria-label="Submit contact form">Send Message</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <div id="cartSidebar" class="cart-sidebar">
+    <div class="card-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" aria-label="Close Cart sidebar">&times;</button>
+    </div>
+
+    <div id="cartItems">
+      <!-- Cart Items will be added here -->
+    </div>
+
+    <div class="cart-total">
+      <h3>Total: $ <span id="cartTotal">0.00</span></h3>
+      <button class="checkout-btn" aria-label="Proceed to checkout">Proceed to Checkout</button>
+    </div>
+  </div>
+
+    <!-- Header -->
+     <header class="header">
+      <nav class="navbar">
+        <a href="#home"class="logo" aria-label="Foodie Restaurant Home" >
+          <i class="fas fa-utensils"></i>
+          Amira Foods
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reservation">Reservation</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+        
+        <div class="nav-icon">
+          <i class ="fas fa-search" aria-label="search"></i>
+          <i class ="fas fa-shopping-cart" id="cartIcon" aria-label="View cart">
+            <span class="cart-count" id="cartCount">0</span>
+            </span>
+          </i>
+          <i class ="fas fa-heart" id="favouritesIcon" aria-label="View favourites"></i>
+        </div>
+          
+     </header>
+  <script src="script.js"></script>
+</body>
+
+</html>
