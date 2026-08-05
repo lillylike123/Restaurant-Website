@@ -372,3 +372,510 @@ login-btn {
     margin-bottom: 1rem;
     font-weight: 600;
 }
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.2rem;
+    color: #2c3e50;
+}
+
+.hero-title .highlight {
+    color: #ff8c42;
+    position: relative;
+}
+
+.hero-title .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ff8c42;
+    border-radius: 2px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: #ff8c42;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: #333;
+    color: white;
+}
+
+.opening-hours {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.opening-hours i {
+    color: #ff8c42;
+    margin-right: 0.5rem;
+}
+
+.hero-image {
+    position: relative;
+    text-align: center;
+}
+
+.main-dish-container {
+    position: relative;
+    display: inline-block;
+}
+
+.main-dish {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px dashed #ff8c42;
+    padding: 20px;
+    background: white;
+}
+
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.floating-tomato {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 60px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-herb {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.best-food-badge {
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    color: #333;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.dish-info-card {
+    position: absolute;
+    bottom: 10%;
+    left: -20%;
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: slideIn 2s ease-out;
+}
+
+.dish-info-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.dish-info h4 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.dish-info .stars {
+    color: #ff8c42;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.dish-info .price {
+    color: #ff8c42;
+    font-weight: bold;
+}
+
+
+.dish-info p {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.popular-dishes {
+     padding: 80px 5%;
+    background: #fdf8f0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+    position: relative;
+
+}
+
+.section-title .highlight {
+    color: #ff8c42;
+
+}
+
+.section-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-arrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #666;
+
+}
+
+.nav-arrow:hover {
+    background: #ff8c42;
+    color: white;
+    border-color: #ff8c42;
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat
+    (auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.dish-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dish-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0 ,0.1);
+}
+
+.dish-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #ff8c42;
+}
+
+.dish-rating {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+dish-rating i {
+    color: #ff8c42;
+    margin-left: 0.3rem;
+
+}
+
+.dish-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1rem auto 1.5rem;
+    border: 5px solid #f8f9fa;
+}
+
+.dish-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.dish-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff8c42;
+    margin-bottom: 0.5rem;
+}
+
+.dish-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+    background: #ff8c42;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.add-to-cart-btn:hover {
+    background: #e6793a;
+    transform: scale(1.05);
+}
+
+.add-to-cart-btn.added {
+    background: #27ae60;
+    animation: pulse 0.5s ease;
+}
+
+.favourite-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+}
+
+.favourite-btn.favorited {
+    color: red;
+}
+
+.favourite-btn:hover {
+    color: #ff8c42;
+}
+
+.about {
+    padding: 100px 5%;
+    background: #fff;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.about-text .highlight {
+    color: #ff8c42;
+
+}
+
+.about-text p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1)
+}
+
+.services {
+    padding: 100px 5%;
+    background: #fdf8f0;
+}  
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+
+.service-card {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient (135deg, #ffffff, #f9f9f9);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ff8c42, #e6793a);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95;
+}
+
+.contact, .reservation {
+    padding: 100px 5%;
+    background: #fff;
+    text-align: center;
+
+}
+
+.reservation-container, .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.reservation-info h3, contact-info h3 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width:600px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease; 
+}
+
+.contact-item i {
+    width: 60px;
+    height: 60px;
+    background: #ff8c42;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-item h4 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.reservation .btn-primary,
+.contact .btn-primary {
+    margin-top: 2rem;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+}
+
+
